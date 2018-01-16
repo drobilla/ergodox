@@ -88,15 +88,15 @@ enum custom_keycodes
  * with moving these to follow the usual column wraparound like the F keys.
  *
  * ,-----------------------------------.  ,-----------------------------------.
- * | Esc | 1  | 2  | 3  | 4  | 5  | -  |  | +  | 6  | 7  | 8  | 9  | 0  | Ins |
+ * | Esc | 1  | 2  | 3  | 4  | 5  | _  |  | +  | 6  | 7  | 8  | 9  | 0  | Ins |
  * |-----+----+----+----+----+---------|  |----+----+----+----+----+----+-----|
- * | Tab | Q  | W  | E  | R  | T  | _  |  | =  | Y  | U  | I  | O  | P  |  \  |
+ * | Tab | Q  | W  | E  | R  | T  | (  |  | )  | Y  | U  | I  | O  | P  |  \  |
  * |-----+----+----+----+----+----|    |  |    |----+----+----+----+----+-----|
  * |  `  | A  | S  | D  | F  | G  |----|  |----| H  | J  | K  | L  | ;  |  '  |
- * |-----+----+----+----+----+----| (  |  | )  |----+----+----+----+----+-----|
+ * |-----+----+----+----+----+----| {  |  | }  |----+----+----+----+----+-----|
  * |Shift| Z  | X  | C  | V  | B  |    |  |    | N  | M  | ,  | .  | /  |Shift|
  * `-----+----+----+----+----+---------'  `---------+----+----+----+----+-----'
- *  | L2 | {  | }  |Lft |Rgt |                      | Up |Dwn | [  | ]  | L2 |
+ *  | L2 | -  | =  |Lft |Rgt |                      | Up |Dwn | [  | ]  | L2 |
  *  `------------------------'                      `------------------------'
  *                           ,---------.  ,---------.
  *                           |Ctl |Alt |  |Alt |Ctl |
@@ -107,11 +107,11 @@ enum custom_keycodes
  *                      `--------------'  `--------------'
  */
 #define BASE_LAYER() ERGOMAP( \
-	ESC , 1  , 2  , 3  , 4  , 5  ,MINS, /**/ PLUS, 6  , 7  , 8  , 9  , 0  ,MINS, \
-	TAB , Q  , W  , E  , R  , T  ,UNDS, /**/ EQL , Y  , U  , I  , O  , P  ,BSLS, \
+	ESC , 1  , 2  , 3  , 4  , 5  ,UNDS, /**/ PLUS, 6  , 7  , 8  , 9  , 0  ,INS , \
+	TAB , Q  , W  , E  , R  , T  ,LPRN, /**/ RPRN, Y  , U  , I  , O  , P  ,BSLS, \
 	GRV , A  , S  , D  , F  , G  ,      /**/       H  , J  , K  , L  ,SCLN,QUOT, \
-	LSFT, Z  , X  , C  , V  , B  ,LPRN, /**/ RPRN, N  , M  ,COMM,DOT ,SLSH,RSFT, \
-	MO2 ,LCBR,RCBR,LEFT,RGHT,           /**/           UP  ,DOWN,LBRC,RBRC,MO2 , \
+	LSFT, Z  , X  , C  , V  , B  ,LBRC, /**/ RBRC, N  , M  ,COMM,DOT ,SLSH,RSFT, \
+	MO2 ,MINS,EQL ,LEFT,RGHT,           /**/           UP  ,DOWN,LBRC,RBRC,MO2 , \
 	/**/                                /**/                                /**/ \
 	/**/                     LCTL,LALT, /**/ RALT,RCTL,                     /**/ \
 	/**/                          LGUI, /**/ RGUI,                          /**/ \
